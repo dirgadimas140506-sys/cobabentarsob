@@ -3,462 +3,320 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy 1st Anniversary - Talita Afrizahra</title>
+    <title>Untuk Talita Afrizahra 💖</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        /* --- TEMA WARNA PINK --- */
+        :root {
+            --primary-pink: #ff69b4;      /* Pink terang */
+            --soft-pink: #ffb6c1;         /* Pink lembut */
+            --light-pink: #fff0f5;        /* Pink sangat muda (background) */
+            --dark-pink: #c71585;         /* Pink tua (untuk teks penting) */
+            --text-color: #5a3a4a;        /* Warna teks agar mudah dibaca */
         }
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            overflow-x: hidden;
-            color: #333;
-        }
-
-        .hearts-container {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            pointer-events: none;
-            z-index: 1;
-        }
-
-        .heart {
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            background: #ff6b9d;
-            transform: rotate(-45deg);
-            animation: float 6s ease-in infinite;
-            opacity: 0.6;
-        }
-
-        .heart:before,
-        .heart:after {
-            content: "";
-            width: 20px;
-            height: 20px;
-            background: #ff6b9d;
-            border-radius: 50%;
-            position: absolute;
-        }
-
-        .heart:before {
-            top: -10px;
-            left: 0;
-        }
-
-        .heart:after {
-            left: 10px;
-            top: 0;
-        }
-
-        @keyframes float {
-            0% {
-                transform: translateY(100vh) rotate(-45deg) scale(0);
-                opacity: 0;
-            }
-            10% {
-                opacity: 0.6;
-            }
-            90% {
-                opacity: 0.6;
-            }
-            100% {
-                transform: translateY(-100px) rotate(-45deg) scale(1);
-                opacity: 0;
-            }
+            background-color: var(--light-pink);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            text-align: center;
         }
 
         .container {
-            position: relative;
-            z-index: 2;
-            max-width: 1200px;
+            max-width: 800px;
             margin: 0 auto;
             padding: 20px;
         }
 
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: white;
+        /* --- HEADER --- */
+        .header {
             padding: 40px 20px;
+            background: linear-gradient(135deg, var(--soft-pink), var(--primary-pink));
+            color: white;
+            border-radius: 0 0 30px 30px;
+            box-shadow: 0 4px 15px rgba(255, 105, 180, 0.3);
         }
 
-        .hero h1 {
-            font-size: 4rem;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
-            animation: fadeInDown 1s ease;
+        .header h1 {
+            font-size: 2.2em;
+            margin-bottom: 10px;
         }
 
-        .hero h2 {
-            font-size: 2.5rem;
-            margin-bottom: 30px;
-            font-weight: 300;
-            animation: fadeInUp 1s ease 0.3s both;
+        .emoji-rain {
+            font-size: 1.5em;
+            letter-spacing: 5px;
         }
 
-        .names {
-            font-size: 3.5rem;
-            font-weight: bold;
-            background: linear-gradient(45deg, #fff, #ffd1dc);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin: 30px 0;
-            animation: fadeIn 1.5s ease 0.6s both;
-        }
-
-        .anniversary-badge {
-            background: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(10px);
-            padding: 20px 40px;
+        /* --- TOMBOL --- */
+        .btn {
+            background-color: var(--primary-pink);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1.1em;
             border-radius: 50px;
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            margin: 30px 0;
-            animation: pulse 2s ease infinite;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.2s;
+            margin: 10px;
+            box-shadow: 0 4px 10px rgba(255, 105, 180, 0.4);
+            font-weight: bold;
         }
 
-        .anniversary-badge span {
-            font-size: 1.5rem;
-            font-weight: 600;
+        .btn:hover {
+            background-color: var(--dark-pink);
+            transform: scale(1.05);
         }
 
-        .section {
+        /* --- KOTAK SURAT RAHASIA --- */
+        .letter-box {
             background: white;
-            border-radius: 30px;
-            padding: 60px 40px;
+            padding: 30px;
+            border-radius: 20px;
+            margin: 30px auto;
+            box-shadow: 0 8px 20px rgba(255, 105, 180, 0.15);
+            max-width: 600px;
+            display: none; /* Tersembunyi sampai tombol ditekan */
+        }
+
+        /* --- SECTION --- */
+        .section {
             margin: 40px 0;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            padding: 20px;
         }
 
         .section h2 {
-            font-size: 2.5rem;
-            color: #667eea;
-            margin-bottom: 30px;
-            text-align: center;
+            color: var(--dark-pink);
+            font-size: 1.8em;
+            margin-bottom: 20px;
         }
 
-        .message {
-            font-size: 1.3rem;
-            line-height: 2;
-            color: #555;
-            text-align: center;
-            max-width: 800px;
+        /* --- LIST ALASAN --- */
+        .reasons-list {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+            max-width: 600px;
             margin: 0 auto;
         }
 
-        .timeline {
-            position: relative;
-            padding: 40px 0;
+        .reasons-list li {
+            background: white;
+            margin: 10px 0;
+            padding: 15px 20px;
+            border-radius: 15px;
+            border-left: 5px solid var(--primary-pink);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
 
-        .timeline-item {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 30px;
-            border-radius: 20px;
-            margin: 30px 0;
-            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
-            transition: transform 0.3s ease;
-        }
-
-        .timeline-item:hover {
-            transform: translateY(-10px);
-        }
-
-        .timeline-item h3 {
-            font-size: 1.8rem;
-            margin-bottom: 15px;
-        }
-
-        .timeline-item p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-        }
-
-        .gallery {
+        /* --- GRID FOTO --- */
+        .photo-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 40px;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
         }
 
-        .gallery-item {
-            aspect-ratio: 1;
-            background: linear-gradient(135deg, #ffd1dc 0%, #ff6b9d 100%);
-            border-radius: 20px;
+        .photo-item {
+            background: white;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+
+        .photo-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .photo-placeholder {
+            width: 100%;
+            height: 150px;
+            background-color: var(--soft-pink);
+            border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 3rem;
-            color: white;
-            box-shadow: 0 10px 30px rgba(255, 107, 157, 0.3);
-            transition: transform 0.3s ease;
-            cursor: pointer;
+            color: var(--dark-pink);
+            font-weight: bold;
+            font-size: 0.9em;
         }
 
-        .gallery-item:hover {
-            transform: scale(1.05) rotate(5deg);
+        .photo-caption {
+            margin-top: 10px;
+            font-size: 0.85em;
+            color: var(--text-color);
         }
 
-        .quote {
-            font-style: italic;
-            font-size: 1.5rem;
-            text-align: center;
-            color: #667eea;
-            padding: 40px;
-            border-left: 5px solid #ff6b9d;
-            margin: 40px 0;
-            background: rgba(102, 126, 234, 0.05);
-            border-radius: 10px;
-        }
-
-        .footer {
-            text-align: center;
-            color: white;
-            padding: 40px;
-            font-size: 1.2rem;
-        }
-
-        .footer .heart-icon {
+        /* --- ANIMASI --- */
+        .music-note {
+            font-size: 2em;
+            animation: bounce 1s infinite alternate;
             display: inline-block;
-            animation: heartbeat 1.5s ease infinite;
         }
 
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        @keyframes bounce {
+            from { transform: translateY(0); }
+            to { transform: translateY(-10px); }
         }
 
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .heart {
+            position: fixed;
+            color: var(--primary-pink);
+            animation: float 4s linear infinite;
+            opacity: 0;
+            z-index: -1;
+            pointer-events: none;
         }
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        @keyframes pulse {
-            0%, 100% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.05);
-            }
-        }
-
-        @keyframes heartbeat {
-            0%, 100% {
-                transform: scale(1);
-            }
-            25% {
-                transform: scale(1.2);
-            }
-            50% {
-                transform: scale(1);
-            }
-            75% {
-                transform: scale(1.2);
-            }
-        }
-
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            .hero h2 {
-                font-size: 1.8rem;
-            }
-            .names {
-                font-size: 2rem;
-            }
-            .section {
-                padding: 40px 20px;
-            }
+        @keyframes float {
+            0% { transform: translateY(100vh) scale(0.5); opacity: 0; }
+            20% { opacity: 0.8; }
+            100% { transform: translateY(-10vh) scale(1.2); opacity: 0; }
         }
     </style>
 </head>
 <body>
-    <div class="hearts-container" id="heartsContainer"></div>
-    
+
+    <div class="header">
+        <div class="emoji-rain">💖💗💕💖💗💕🌸💖</div>
+        <div class="music-note">🎵</div>
+        
+        <!-- GANTI NAMA ATAU SAPAAN DI SINI -->
+        <h1>Hai Talita Afrizahra,</h1>
+        
+        <!-- GANTI TEKS PEMBUKA DI SINI -->
+        <p>Ini bukan apa-apa yang besar, cuma tempat kecil buat naruh semua alasan kenapa kamu tuh berharga banget. Kalau lagi capek, lagi bete, atau cuma pengen ngerasa disayang — buka aja halaman ini kapan pun yang kamu mau.</p>
+        <p>Aku sayangggg kamuuuu Talita. Semangat yaaa, hari ini juga. 💖</p>
+        <p>LOVE YOU MOREEE SAYANGKU CINTAKU MANISKU DUNIAKU MY BABY SWEET SWEET KUU</p>
+        
+        <br>
+        <p>sebuah kejutan kecil untuk</p>
+        <h2>Talita</h2>
+        <button class="btn" onclick="openLetter()">Buka Suratnya 💌</button>
+        <p>lihat kejutannya ↓</p>
+    </div>
+
     <div class="container">
-        <div class="hero">
-            <h1>Happy Anniversary</h1>
-            <div class="names">Gaga & Mama Iyen</div>
-            <h2>Love u mama iyen</h2>
-            <div class="anniversary-badge">
-                <span> 1 Tahun Bersama </span>
-            </div>
+        <!-- SURAT RAHASIA (Muncul kalau tombol ditekan) -->
+        <div id="secretLetter" class="letter-box">
+            <h3>Surat Kecil Buat Kamu 💌</h3>
+            <!-- GANTI ISI SURAT DI SINI -->
+            <p>Talita, kamu itu spesial banget buat aku. Makasih ya udah ada di hidup aku. Aku bakal selalu berusaha bikin kamu senyum setiap hari.</p>
+            <p>I love you so much! 💖</p>
         </div>
 
+        <!-- BAGIAN ALASAN -->
         <div class="section">
-            <h2>Untuk Talita Tersayang</h2>
-            <div class="message">
-                <p>Satu tahun yang lalu, hidupku berubah selamanya ketika kamu masuk ke dalam hidupku.</p>
-                <br>
-                <p>Setiap hari bersamamu adalah hadiah terindah. Kamu membuat hari-hariku lebih berwarna, senyummu adalah sumber kebahagiaanku.</p>
-                <br>
-                <p>Terima kasih telah menjadi bagian terindah dalam hidupku. Aku bersyukur memiliki kamu, Talita Afrizahra.</p>
-            </div>
+            <p>catatan kecil</p>
+            <h2>Alasan Kenapa Kamu Istimewa</h2>
+            <ul class="reasons-list">
+                <!-- GANTI ALASAN-ALASAN DI SINI (Bisa ditambah/dikurang) -->
+                <li>Karena senyum kamu bisa bikin hari yang paling berantakan jadi kerasa lebih ringan. 🌸</li>
+                <li>Karena kamu kuat banget, bahkan di hari-hari yang kamu pikir kamu nggak kuat. 💪</li>
+                <li>Karena caramu peduli sama orang lain itu jarang ada duanya. 💕</li>
+                <li>Karena kamu selalu berusaha, meskipun kadang capek dan pengen nyerah. ✨</li>
+                <li>Karena kamu lebih berharga dari yang kamu sadari. 💎</li>
+                <li>Karena punya kamu di hidupku itu salah satu hal terbaik yang pernah terjadi. 🥰</li>
+            </ul>
         </div>
 
+        <!-- BAGIAN FOTO / KENANGAN -->
         <div class="section">
-            <h2>Perjalanan Kita</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <h3> Awal Pertemuan</h3>
-                    <p>Krampullllll menjadi saksi bahwa gaga sayangggg mama iyenn.</p>
+            <p>kenangan kita</p>
+            <h2>Momen-Momen Kecil yang Aku Simpan</h2>
+            <p>Beberapa foto, disusun kayak buku tempel.</p>
+            
+            <div class="photo-grid">
+                <!-- CARA GANTI FOTO: 
+                     Hapus div "photo-placeholder", ganti dengan: 
+                     <img src="nama_file_foto_kamu.jpg" style="width:100%; border-radius:8px;"> 
+                     Pastikan file foto ada di folder yang sama dengan file index.html ini! -->
+                
+                <div class="photo-item">
+                    <div class="photo-placeholder">[Tempat Foto 1]</div>
+                    <div class="photo-caption">hehe ini favoritku</div>
                 </div>
-                <div class="timeline-item">
-                    <h3> Momen Manis</h3>
-                    <p>Tawa, cerita, dan kenangan indah yang kita buat bersama. Setiap detik bersamamu adalah harta berharga.</p>
+                <div class="photo-item">
+                    <div class="photo-placeholder">[Tempat Foto 2]</div>
+                    <div class="photo-caption">gumuchhhhhh</div>
                 </div>
-                <div class="timeline-item">
-                    <h3> Suka & Duka</h3>
-                    <p>Banyak hal yang udah kita laluin maaf juga aku terlalu egois karna aku cuman mau milikin kamu SEPENUHNYA.</p>
+                <div class="photo-item">
+                    <div class="photo-placeholder">[Tempat Foto 3]</div>
+                    <div class="photo-caption">senyum terbaik</div>
                 </div>
-                <div class="timeline-item">
-                    <h3>Hari Ini</h3>
-                    <p>Satu tahun penuh cinta, semoga hari demi hari aku dan kamu terus bertambah cintanya.</p>
+                <div class="photo-item">
+                    <div class="photo-placeholder">[Tempat Foto 4]</div>
+                    <div class="photo-caption">cantikk bangett sih</div>
+                </div>
+                <div class="photo-item">
+                    <div class="photo-placeholder">[Tempat Foto 5]</div>
+                    <div class="photo-caption">selaluuu cantik</div>
+                </div>
+                <div class="photo-item">
+                    <div class="photo-placeholder">[Tempat Foto 6]</div>
+                    <div class="photo-caption">manissss bangett kamu</div>
                 </div>
             </div>
         </div>
 
+        <!-- BAGIAN VIDEO SUDAH DIHAPUS SESUAI PERMINTAAN -->
+
+        <!-- BAGIAN SEMANGAT -->
         <div class="section">
-            <h2>Kenangan Kita</h2>
-            <div class="Pictures">
-                <div class="Pictures-item">
-    <img src="foto1.jpg" alt="Kenangan 1">
-</div>
-<div class="gallery-item">
-    <img src="foto2.jpg" alt="Kenangan 2">
-</div>
-<div class="gallery-item">
-    <img src="foto3.jpg" alt="Kenangan 3">
-</div>
-<div class="gallery-item">
-    <img src="foto4.jpg" alt="Kenangan 4">
-</div>
-<div class="gallery-item">
-    <img src="foto5.jpg" alt="Kenangan 5">
-</div>
-<div class="gallery-item">
-    <img src="foto6.jpg" alt="Kenangan 6">
-</div>
-            </div>
-        </div>
-
-        <div class="quote">
-            "Semoga di masa depan nanti kita bisa berkumpul di ruang tamu sambil bermain kucing sayangg."
-        </div>
-
-        <div class="section">
-            <h2>Janjiku Untukmu</h2>
-            <div class="message">
-                <p>Aku berjanji akan selalu ada untukmu, dalam suka maupun duka.</p>
-                <br>
-                <p>Aku berjanji akan terus membuatmu tersenyum, mendukung mimpimu, dan mencintaimu dengan sepenuh hati.</p>
-                <br>
-                <p>Aku berjanji akan menjadi partner terbaikmu, sahabat terbaikmu, dan cintamu selamanya.</p>
-                <br>
-                <p><strong>Happy 1st Anniversary, Talita Afrizahra. Aku mencintaimu lebih dari yang bisa kuungkapkan.</strong></p>
-            </div>
-        </div>
-
-        <div class="footer">
-            <p>Dengan seluruh cintaku <span class="heart-icon">❤️</span></p>
-            <p>Untuk Talita Afrizahra tersayang</p>
-            <p style="margin-top: 20px; font-size: 1rem; opacity: 0.8;">Forever & Always</p>
+            <p>kalau lagi butuh</p>
+            <h2>Semangat Buat Kamu</h2>
+            <!-- GANTI TEKS SEMANGAT DI SINI -->
+            <p style="font-size: 1.2em; font-weight: bold; color: var(--dark-pink);">
+                "Kamu udah jalan sejauh ini. Itu bukan kebetulan — itu karena kamu kuat."
+            </p>
+            <button class="btn" onclick="giveSpirit()">Kasih semangat lagi 💪</button>
         </div>
     </div>
 
     <script>
-        // Create floating hearts
-        const heartsContainer = document.getElementById('heartsContainer');
-        
+        // Fungsi untuk membuka/menutup surat
+        function openLetter() {
+            const letter = document.getElementById('secretLetter');
+            if (letter.style.display === 'block') {
+                letter.style.display = 'none';
+            } else {
+                letter.style.display = 'block';
+                letter.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Fungsi kasih semangat random (bisa kamu tambahin kata-katanya di sini)
+        const spirits = [
+            "Kamu itu lebih kuat dari yang kamu kira, Talita! 💖",
+            "Tarik napas, kamu pasti bisa lewatin ini. Aku di sini buat kamu! 🌸",
+            "Ingat, di balik awan mendung pasti ada matahari. Semangat sayangku! ☀️",
+            "Kamu hebat, kamu luar biasa, dan kamu sangat dicintai! 💕",
+            "Jangan lupa senyum ya, karena senyummu itu duniaku! 😊"
+        ];
+
+        function giveSpirit() {
+            const randomSpirit = spirits[Math.floor(Math.random() * spirits.length)];
+            alert(randomSpirit);
+        }
+
+        // Animasi hati melayang di background
         function createHeart() {
             const heart = document.createElement('div');
-            heart.className = 'heart';
-            heart.style.left = Math.random() * 100 + '%';
-            heart.style.animationDuration = (Math.random() * 3 + 4) + 's';
-            heart.style.animationDelay = Math.random() * 2 + 's';
-            heartsContainer.appendChild(heart);
+            heart.classList.add('heart');
+            heart.innerHTML = '💖';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = Math.random() * 3 + 3 + 's';
+            heart.style.fontSize = Math.random() * 20 + 15 + 'px';
+            document.body.appendChild(heart);
             
             setTimeout(() => {
                 heart.remove();
-            }, 8000);
-        }
-        
-        // Create hearts periodically
-        setInterval(createHeart, 300);
-        
-        // Initial hearts
-        for (let i = 0; i < 15; i++) {
-            setTimeout(createHeart, i * 200);
+            }, 6000);
         }
 
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-
-        // Add parallax effect to gallery items
-        document.querySelectorAll('.gallery-item').forEach(item => {
-            item.addEventListener('mousemove', (e) => {
-                const rect = item.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-                
-                const centerX = rect.width / 2;
-                const centerY = rect.height / 2;
-                
-                const rotateX = (y - centerY) / 10;
-                const rotateY = (centerX - x) / 10;
-                
-                item.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
-            });
-            
-            item.addEventListener('mouseleave', () => {
-                item.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale(1)';
-            });
-        });
+        setInterval(createHeart, 500);
     </script>
 </body>
 </html>
