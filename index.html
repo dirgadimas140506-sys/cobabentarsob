@@ -1,322 +1,190 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Untuk Talita Afrizahra 💖</title>
-    <style>
-        /* --- TEMA WARNA PINK --- */
-        :root {
-            --primary-pink: #ff69b4;      /* Pink terang */
-            --soft-pink: #ffb6c1;         /* Pink lembut */
-            --light-pink: #fff0f5;        /* Pink sangat muda (background) */
-            --dark-pink: #c71585;         /* Pink tua (untuk teks penting) */
-            --text-color: #5a3a4a;        /* Warna teks agar mudah dibaca */
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Happy Anniversary 💌</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;1,400;1,600&family=Caveat:wght@500;700&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--plum:#ffffff;--berry:#FFB6C1;--rose:#F4A6B8;--lilac:#f9f9f9;--paper:#FFF8FB;--ink:#3A1A3F;
+--serif:'Fraunces',Georgia,serif;--hand:'Caveat','Comic Sans MS',cursive;--sans:'Nunito',system-ui,sans-serif}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--paper);color:var(--ink);line-height:1.7;overflow-x:hidden}
+section{padding:80px 22px;max-width:960px;margin:auto}
+h2{font-family:var(--serif);font-weight:600;font-style:italic;font-size:clamp(28px,6vw,42px);line-height:1.2;margin-bottom:10px}
+.note{font-family:var(--hand);font-size:24px;color:var(--berry)}
+button{font:inherit;cursor:pointer;border:0}
+button:focus-visible,a:focus-visible{outline:3px solid var(--rose);outline-offset:3px}
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--light-pink);
-            color: var(--text-color);
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            text-align: center;
-        }
+.hero{max-width:none;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
+background:radial-gradient(ellipse at 30% 20%,#FFB6C1 0,transparent 55%),radial-gradient(ellipse at 80% 90%,#3d1546 0,transparent 60%),var(--plum);color:#fff;
+padding-top:calc(60px + env(safe-area-inset-top,0px))}
+.hero .note{color:var(--rose);font-size:28px}
+.hero h1{font-family:var(--serif);font-style:italic;font-weight:600;font-size:clamp(64px,22vw,170px);line-height:1;margin:6px 0 4px;letter-spacing:-.02em}
+.days{font-family:var(--serif);font-style:italic;color:var(--lilac);font-size:18px;margin-bottom:34px;min-height:1.7em}
+.btn{background:var(--rose);color:var(--plum);padding:14px 30px;border-radius:999px;font-weight:600;font-size:17px;transition:transform .2s}
+.btn:hover{transform:scale(1.05)}
+.down{display:block;margin-top:26px;color:var(--lilac);text-decoration:none;font-family:var(--hand);font-size:22px}
+.float{position:absolute;pointer-events:none;opacity:.5;animation:fl 9s ease-in infinite;font-size:22px}
+@keyframes fl{from{transform:translateY(105vh) rotate(0)}to{transform:translateY(-10vh) rotate(60deg)}}
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+#music{position:fixed;top:calc(14px + env(safe-area-inset-top,0px));right:14px;z-index:30;width:44px;height:44px;border-radius:50%;background:var(--rose);color:var(--plum);font-size:20px}
+#music.on{animation:spin 4s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
 
-        /* --- HEADER --- */
-        .header {
-            padding: 40px 20px;
-            background: linear-gradient(135deg, var(--soft-pink), var(--primary-pink));
-            color: white;
-            border-radius: 0 0 30px 30px;
-            box-shadow: 0 4px 15px rgba(255, 105, 180, 0.3);
-        }
+.reasons{display:grid;gap:18px;margin-top:30px}
+.reasons p{background:#fff;border-left:6px solid var(--rose);padding:18px 22px;border-radius:0 18px 18px 0;font-size:17px;box-shadow:0 6px 20px rgba(90,31,87,.08)}
+.reasons p:nth-child(even){border-left-color:var(--lilac);margin-left:clamp(0px,6vw,60px)}
 
-        .header h1 {
-            font-size: 2.2em;
-            margin-bottom: 10px;
-        }
+.wall{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:26px 18px;margin-top:34px}
+.pol{background:#fff;padding:10px 10px 30px;box-shadow:0 8px 22px rgba(43,16,48,.18);cursor:zoom-in;transition:transform .25s;border:0;display:block;width:100%}
+.pol:nth-child(3n+1){transform:rotate(-3deg)}.pol:nth-child(3n+2){transform:rotate(2deg)}.pol:nth-child(3n){transform:rotate(-1deg)}
+.pol:hover{transform:rotate(0) scale(1.06);z-index:2;position:relative}
+.pol img{width:100%;aspect-ratio:1;object-fit:cover;display:block;background:linear-gradient(135deg,var(--rose),var(--lilac))}
 
-        .emoji-rain {
-            font-size: 1.5em;
-            letter-spacing: 5px;
-        }
+.cheer{text-align:center;background:linear-gradient(160deg,var(--lilac),var(--rose));max-width:none;color:var(--plum)}
+.cheer p#msg{font-family:var(--serif);font-style:italic;font-size:clamp(22px,5vw,32px);max-width:620px;margin:20px auto 28px;min-height:3.6em}
+.cheer .btn{background:var(--plum);color:#fff}
 
-        /* --- TOMBOL --- */
-        .btn {
-            background-color: var(--primary-pink);
-            color: white;
-            border: none;
-            padding: 12px 30px;
-            font-size: 1.1em;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: transform 0.2s, background-color 0.2s;
-            margin: 10px;
-            box-shadow: 0 4px 10px rgba(255, 105, 180, 0.4);
-            font-weight: bold;
-        }
+.modal{position:fixed;inset:0;z-index:40;background:rgba(43,16,48,.82);display:none;align-items:center;justify-content:center;padding:22px}
+.modal.open{display:flex}
+.letter{background:var(--paper);max-width:520px;max-height:86svh;overflow:auto;padding:34px 28px;border-radius:6px;position:relative;font-family:var(--hand);font-size:25px;line-height:1.5;animation:pop .35s}
+@keyframes pop{from{transform:translateY(30px) scale(.94);opacity:0}}
+.letter p+p{margin-top:14px}
+.x{position:absolute;top:8px;right:12px;background:none;font-size:30px;color:var(--berry)}
+#big{max-width:min(92vw,720px);max-height:88svh;border:8px solid #fff;box-shadow:0 10px 40px #0008}
 
-        .btn:hover {
-            background-color: var(--dark-pink);
-            transform: scale(1.05);
-        }
-
-        /* --- KOTAK SURAT RAHASIA --- */
-        .letter-box {
-            background: white;
-            padding: 30px;
-            border-radius: 20px;
-            margin: 30px auto;
-            box-shadow: 0 8px 20px rgba(255, 105, 180, 0.15);
-            max-width: 600px;
-            display: none; /* Tersembunyi sampai tombol ditekan */
-        }
-
-        /* --- SECTION --- */
-        .section {
-            margin: 40px 0;
-            padding: 20px;
-        }
-
-        .section h2 {
-            color: var(--dark-pink);
-            font-size: 1.8em;
-            margin-bottom: 20px;
-        }
-
-        /* --- LIST ALASAN --- */
-        .reasons-list {
-            list-style: none;
-            padding: 0;
-            text-align: left;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .reasons-list li {
-            background: white;
-            margin: 10px 0;
-            padding: 15px 20px;
-            border-radius: 15px;
-            border-left: 5px solid var(--primary-pink);
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        }
-
-        /* --- GRID FOTO --- */
-        .photo-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .photo-item {
-            background: white;
-            padding: 10px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            transition: transform 0.2s;
-        }
-
-        .photo-item:hover {
-            transform: translateY(-5px);
-        }
-
-        .photo-placeholder {
-            width: 100%;
-            height: 150px;
-            background-color: var(--soft-pink);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--dark-pink);
-            font-weight: bold;
-            font-size: 0.9em;
-        }
-
-        .photo-caption {
-            margin-top: 10px;
-            font-size: 0.85em;
-            color: var(--text-color);
-        }
-
-        /* --- ANIMASI --- */
-        .music-note {
-            font-size: 2em;
-            animation: bounce 1s infinite alternate;
-            display: inline-block;
-        }
-
-        @keyframes bounce {
-            from { transform: translateY(0); }
-            to { transform: translateY(-10px); }
-        }
-
-        .heart {
-            position: fixed;
-            color: var(--primary-pink);
-            animation: float 4s linear infinite;
-            opacity: 0;
-            z-index: -1;
-            pointer-events: none;
-        }
-
-        @keyframes float {
-            0% { transform: translateY(100vh) scale(0.5); opacity: 0; }
-            20% { opacity: 0.8; }
-            100% { transform: translateY(-10vh) scale(1.2); opacity: 0; }
-        }
-    </style>
+footer{text-align:center;padding:50px 22px calc(60px + env(safe-area-inset-bottom,0px));font-family:var(--hand);font-size:24px;color:var(--berry)}
+@media (prefers-reduced-motion:reduce){.float,#music.on{animation:none}.letter{animation:none}html{scroll-behavior:auto}}
+</style>
 </head>
 <body>
 
-    <div class="header">
-        <div class="emoji-rain">💖💗💕💖💗💕🌸💖</div>
-        <div class="music-note">🎵</div>
-        
-        <!-- GANTI NAMA ATAU SAPAAN DI SINI -->
-        <h1>Hai Talita Afrizahra,</h1>
-        
-        <!-- GANTI TEKS PEMBUKA DI SINI -->
-        <p>Ini bukan apa-apa yang besar, cuma tempat kecil buat naruh semua alasan kenapa kamu tuh berharga banget. Kalau lagi capek, lagi bete, atau cuma pengen ngerasa disayang — buka aja halaman ini kapan pun yang kamu mau.</p>
-        <p>Aku sayangggg kamuuuu Talita. Semangat yaaa, hari ini juga. 💖</p>
-        <p>LOVE YOU MOREEE SAYANGKU CINTAKU MANISKU DUNIAKU MY BABY SWEET SWEET KUU</p>
-        
-        <br>
-        <p>sebuah kejutan kecil untuk</p>
-        <h2>Talita</h2>
-        <button class="btn" onclick="openLetter()">Buka Suratnya 💌</button>
-        <p>lihat kejutannya ↓</p>
-    </div>
+<button id="music" aria-label="Putar atau jeda musik">♪</button>
+<audio id="bgm" loop src="assets/audio/backsound.mp3"></audio>
 
-    <div class="container">
-        <!-- SURAT RAHASIA (Muncul kalau tombol ditekan) -->
-        <div id="secretLetter" class="letter-box">
-            <h3>Surat Kecil Buat Kamu 💌</h3>
-            <!-- GANTI ISI SURAT DI SINI -->
-            <p>Talita, kamu itu spesial banget buat aku. Makasih ya udah ada di hidup aku. Aku bakal selalu berusaha bikin kamu senyum setiap hari.</p>
-            <p>I love you so much! 💖</p>
-        </div>
+<header class="hero">
+  <p class="note">happy anniversary, sayang</p>
+  <h1 id="nama">Nama</h1>
+  <p class="days" id="days"></p>
+  <button class="btn" id="openLetter">Buka suratnya</button>
+  <a class="down" href="#alasan">liattt kebawahh ↓</a>
+</header>
 
-        <!-- BAGIAN ALASAN -->
-        <div class="section">
-            <p>catatan kecil</p>
-            <h2>Alasan Kenapa Kamu Istimewa</h2>
-            <ul class="reasons-list">
-                <!-- GANTI ALASAN-ALASAN DI SINI (Bisa ditambah/dikurang) -->
-                <li>Karena senyum kamu bisa bikin hari yang paling berantakan jadi kerasa lebih ringan. 🌸</li>
-                <li>Karena kamu kuat banget, bahkan di hari-hari yang kamu pikir kamu nggak kuat. 💪</li>
-                <li>Karena caramu peduli sama orang lain itu jarang ada duanya. 💕</li>
-                <li>Karena kamu selalu berusaha, meskipun kadang capek dan pengen nyerah. ✨</li>
-                <li>Karena kamu lebih berharga dari yang kamu sadari. 💎</li>
-                <li>Karena punya kamu di hidupku itu salah satu hal terbaik yang pernah terjadi. 🥰</li>
-            </ul>
-        </div>
+<section id="alasan">
+  <p class="note">catatan kecil</p>
+  <h2>Alasan kenapa aku sayang kamu</h2>
+  <div class="reasons">
+    <p>Karena senyum kamu bisa bikin hari yang paling berantakan jadi terasa ringan.</p>
+    <p>Karena kamu kuat, bahkan di hari-hari yang kamu sendiri pikir nggak kuat.</p>
+    <p>Karena caramu peduli sama orang lain itu jarang ada duanya.</p>
+    <p>Karena kamu selalu berusaha, walau kadang capek.</p>
+    <p>Karena kamu lebih berharga dari yang kamu sadari.</p>
+    <p>Karena punya kamu di hidupku itu salah satu hal terbaik yang pernah terjadi.</p>
+  </div>
+</section>
 
-        <!-- BAGIAN FOTO / KENANGAN -->
-        <div class="section">
-            <p>kenangan kita</p>
-            <h2>Momen-Momen Kecil yang Aku Simpan</h2>
-            <p>Beberapa foto, disusun kayak buku tempel.</p>
-            
-            <div class="photo-grid">
-                <!-- CARA GANTI FOTO: 
-                     Hapus div "photo-placeholder", ganti dengan: 
-                     <img src="nama_file_foto_kamu.jpg" style="width:100%; border-radius:8px;"> 
-                     Pastikan file foto ada di folder yang sama dengan file index.html ini! -->
-                
-                <div class="photo-item">
-                    <div class="photo-placeholder">[Tempat Foto 1]</div>
-                    <div class="photo-caption">hehe ini favoritku</div>
-                </div>
-                <div class="photo-item">
-                    <div class="photo-placeholder">[Tempat Foto 2]</div>
-                    <div class="photo-caption">gumuchhhhhh</div>
-                </div>
-                <div class="photo-item">
-                    <div class="photo-placeholder">[Tempat Foto 3]</div>
-                    <div class="photo-caption">senyum terbaik</div>
-                </div>
-                <div class="photo-item">
-                    <div class="photo-placeholder">[Tempat Foto 4]</div>
-                    <div class="photo-caption">cantikk bangett sih</div>
-                </div>
-                <div class="photo-item">
-                    <div class="photo-placeholder">[Tempat Foto 5]</div>
-                    <div class="photo-caption">selaluuu cantik</div>
-                </div>
-                <div class="photo-item">
-                    <div class="photo-placeholder">[Tempat Foto 6]</div>
-                    <div class="photo-caption">manissss bangett kamu</div>
-                </div>
-            </div>
-        </div>
+<section>
+  <p class="note">dump us</p>
+  <h2>I Love You More Than You Know</h2>
+  <p id="galInfo"></p>
+  <div class="wall" id="wall"></div>
+</section>
 
-        <!-- BAGIAN VIDEO SUDAH DIHAPUS SESUAI PERMINTAAN -->
+<section class="cheer">
+  <p class="note" style="color:var(--berry)">kalau lagi butuh</p>
+  <h2>Semangat buat kamu</h2>
+  <p id="msg">Kamu udah jalan sejauh ini. Itu bukan kebetulan, itu karena kamu kuat.</p>
+  <button class="btn" id="cheerBtn">Kasih semangat lagi</button>
+</section>
 
-        <!-- BAGIAN SEMANGAT -->
-        <div class="section">
-            <p>kalau lagi butuh</p>
-            <h2>Semangat Buat Kamu</h2>
-            <!-- GANTI TEKS SEMANGAT DI SINI -->
-            <p style="font-size: 1.2em; font-weight: bold; color: var(--dark-pink);">
-                "Kamu udah jalan sejauh ini. Itu bukan kebetulan — itu karena kamu kuat."
-            </p>
-            <button class="btn" onclick="giveSpirit()">Kasih semangat lagi 💪</button>
-        </div>
-    </div>
+<footer>dibuat sepenuh hati, buat <span class="to">kamu</span><br>dari <span id="dari">aku</span> 🤎</footer>
 
-    <script>
-        // Fungsi untuk membuka/menutup surat
-        function openLetter() {
-            const letter = document.getElementById('secretLetter');
-            if (letter.style.display === 'block') {
-                letter.style.display = 'none';
-            } else {
-                letter.style.display = 'block';
-                letter.scrollIntoView({ behavior: 'smooth' });
-            }
-        }
+<div class="modal" id="letterModal" role="dialog" aria-modal="true" aria-label="Surat">
+  <div class="letter">
+    <button class="x" data-close aria-label="Tutup">×</button>
+    <p>Hai <b class="to">sayang</b>,</p>
+    <p>Ini bukan apa-apa yang besar, cuma tempat kecil buat naruh semua alasan kenapa kamu berharga banget buatku. Kalau lagi capek, lagi bete, atau cuma pengen ngerasa disayang, buka aja halaman ini kapan pun kamu mau.</p>
+    <p>Selamat anniversary ya. Terima kasih udah jadi kamu, dan udah mau jalan bareng aku sampai hari ini.</p>
+    <p>Sayang kamu banyak-banyak. 💛<br>— <span class="from">aku</span></p>
+  </div>
+</div>
 
-        // Fungsi kasih semangat random (bisa kamu tambahin kata-katanya di sini)
-        const spirits = [
-            "Kamu itu lebih kuat dari yang kamu kira, Talita! 💖",
-            "Tarik napas, kamu pasti bisa lewatin ini. Aku di sini buat kamu! 🌸",
-            "Ingat, di balik awan mendung pasti ada matahari. Semangat sayangku! ☀️",
-            "Kamu hebat, kamu luar biasa, dan kamu sangat dicintai! 💕",
-            "Jangan lupa senyum ya, karena senyummu itu duniaku! 😊"
-        ];
+<div class="modal" id="photoModal" role="dialog" aria-modal="true" aria-label="Foto">
+  <img id="big" alt="">
+</div>
 
-        function giveSpirit() {
-            const randomSpirit = spirits[Math.floor(Math.random() * spirits.length)];
-            alert(randomSpirit);
-        }
+<script>
+/* ====== GANTI DI SINI ====== */
+const CONFIG = {
+  untuk: "Talita Afrizahra",        // nama pacar kamu
+  dari: "Gaga",             // nama kamu
+  tanggalJadian: "Its been 533 days for us",// format TAHUN-BULAN-TANGGAL, kosongkan "" kalau nggak mau hitungan hari
+  jumlahFoto: 17,             // taruh foto di assets/foto/1.jpg, 2.jpg, dst
+  semangat: [
+    "Buat MAMA IYEEN YANG ATU SAYANGGGG.",
+    "Aku bingung kamu kenapa selaluuu cantiiii.",
+    "Maaciii udahhh sabaaarrr banget sama akuu.",
+    "xixixixixi hali telbelat kamu telnyata ngadepin atuu yaa.",
+    "Atuu bangga banget sama kamu, bahkan buat hal-hal yang kamu anggap sepele.",
+    "Aku selalu sayangggggg banget sama kamuuu."
+  ]
+};
+/* ============================ */
 
-        // Animasi hati melayang di background
-        function createHeart() {
-            const heart = document.createElement('div');
-            heart.classList.add('heart');
-            heart.innerHTML = '💖';
-            heart.style.left = Math.random() * 100 + 'vw';
-            heart.style.animationDuration = Math.random() * 3 + 3 + 's';
-            heart.style.fontSize = Math.random() * 20 + 15 + 'px';
-            document.body.appendChild(heart);
-            
-            setTimeout(() => {
-                heart.remove();
-            }, 6000);
-        }
+const q = new URLSearchParams(location.search);          // contoh: ?untuk=Siti&dari=Budi&tgl=2024-02-14
+const untuk = q.get("untuk") || CONFIG.untuk, dari = q.get("dari") || CONFIG.dari, tgl = q.get("tgl") || CONFIG.tanggalJadian;
+const $ = s => document.querySelector(s), $$ = s => document.querySelectorAll(s);
 
-        setInterval(createHeart, 500);
-    </script>
+document.title = "Untuk " + untuk + " 💌";
+$("#nama").textContent = untuk;
+$("#dari").textContent = dari;
+$$(".to").forEach(e => e.textContent = untuk);
+$$(".from").forEach(e => e.textContent = dari);
+
+if (tgl) {
+  const d = Math.floor((Date.now() - new Date(tgl + "T00:00:00")) / 864e5);
+  if (d >= 0) $("#days").textContent = "sudah " + d.toLocaleString("id-ID") + " hari bersama kamu";
+}
+
+/* galeri */
+$("#galInfo").textContent = CONFIG.jumlahFoto + " foto, disusun kayak buku tempel. Klik buat lihat lebih besar.";
+for (let i = 1; i <= CONFIG.jumlahFoto; i++) {
+  const b = document.createElement("button");
+  b.className = "pol"; b.setAttribute("aria-label", "Lihat foto " + i);
+  b.innerHTML = '<img loading="lazy" alt="Foto kenangan ' + i + '" src="assets/foto/' + i + '.jpg">';
+  b.onclick = () => { $("#big").src = "assets/foto/" + i + ".jpg"; $("#photoModal").classList.add("open"); };
+  $("#wall").appendChild(b);
+}
+
+/* modal */
+const letterModal = $("#letterModal"), photoModal = $("#photoModal");
+$("#openLetter").onclick = () => { letterModal.classList.add("open"); startMusic(); };
+[letterModal, photoModal].forEach(m => m.addEventListener("click", e => { if (e.target === m || e.target.hasAttribute("data-close")) m.classList.remove("open"); }));
+addEventListener("keydown", e => { if (e.key === "Escape") $$(".modal").forEach(m => m.classList.remove("open")); });
+
+/* semangat */
+let last = 0;
+$("#cheerBtn").onclick = () => {
+  let n; do { n = Math.floor(Math.random() * CONFIG.semangat.length); } while (n === last && CONFIG.semangat.length > 1);
+  last = n; $("#msg").textContent = CONFIG.semangat[n];
+};
+
+/* musik */
+const bgm = $("#bgm"), mb = $("#music");
+function startMusic() { if (bgm.paused) bgm.play().then(() => mb.classList.add("on")).catch(() => {}); }
+mb.onclick = () => { if (bgm.paused) startMusic(); else { bgm.pause(); mb.classList.remove("on"); } };
+
+/* hati melayang di hero */
+const hero = $(".hero");
+for (let i = 0; i < 9; i++) {
+  const h = document.createElement("span");
+  h.className = "float"; h.textContent = ["💗","💜","🤍"][i % 3];
+  h.style.left = (5 + i * 11) + "%"; h.style.animationDelay = (-i * 1.9) + "s"; h.style.animationDuration = (8 + i % 4 * 2) + "s";
+  hero.appendChild(h);
+}
+</script>
 </body>
 </html>
